@@ -3,7 +3,8 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from "./components/home/home.component";
 import {ContactComponent} from "./components/contact/contact.component";
 import {QuizComponent} from "./components/quiz/quiz.component";
-import {BlogComponent} from './components/blog/blog.component';
+import {BlogHomeComponent} from './components/blog-home/blog-home.component';
+import {BlogItemDetailsComponent} from "./components/blog-item-details/blog-item-details.component";
 
 
 const routes: Routes = [
@@ -17,14 +18,18 @@ const routes: Routes = [
   },
   {
     path: 'blog',
-    component: BlogComponent,
+    component: BlogHomeComponent,
 
   },
   {
     path: 'quiz',
     component: QuizComponent,
-
-  }];
+  },
+  {
+    path: 'blog/detail/:id',
+    component: BlogItemDetailsComponent
+  }
+  ];
 
 
 @NgModule({
