@@ -3,7 +3,7 @@
   <div *ngFor="let item of items$ | filter: filterText">
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row">
-        <blog-item [id]="item.id" [image]="item.image" [text]="item.title">
+        <blog-item [id]="item.id" [image]="item.url" [text]="item.title">
         </blog-item>
       </div>
     </div>
