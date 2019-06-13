@@ -5,7 +5,7 @@ import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
-  selector: 'app-blog-item-details',
+  selector: 'blog-item-details',
   templateUrl: './blog-item-details.component.html',
   styleUrls: ['./blog-item-details.component.css']
 })
@@ -26,7 +26,7 @@ export class BlogItemDetailsComponent implements OnInit {
       });
     if (id) {
       this.dataService.getById(id).subscribe(res => {
-        this.image = res['url'];
+        this.image = res['image'];
         this.text = res['text'];
       });
     } else {
