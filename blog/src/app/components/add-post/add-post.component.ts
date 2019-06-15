@@ -11,7 +11,8 @@ export class AddPostComponent implements OnInit {
 
   public post = {
     image: '',
-    text: ''
+    text: '',
+    title: ''
   };
 
   constructor(private dataService: DataService, private router: Router) { }

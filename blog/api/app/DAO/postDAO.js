@@ -7,7 +7,8 @@ import * as _ from "lodash";
 
 const postSchema = new mongoose.Schema({
   image: {type: String},
-  text: {type: String}
+  text: {type: String},
+  title: {type: String}
 }, {
   collection: 'aw-post'
 });

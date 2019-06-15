@@ -9,21 +9,21 @@ import {Router, ActivatedRoute} from '@angular/router';
 export class SearchBarComponent implements OnInit {
   filterText: string;
 
-  @Output() name = new EventEmitter<string>();
+  @Output() title = new EventEmitter<string>();
 
   constructor(private router: Router, private route: ActivatedRoute){ }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      this.filterText = params['name'];
+      this.filterText = params['title'];
       this.sendFilter();
     });
   }
 
 
   sendFilter() {
-    this.name.emit(this.filterText);
-    this.router.navigate(['/blog'], {queryParams: {name: this.filterText}});
+    this.title.emit(this.filterText);
+    this.router.navigate(['/blog'], {queryParams: {title: this.filterText}});
 
   }
 }
